@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-ionic-fa676": {
+      "hosting": {
+        "app": [
+          "login-ionic-fa676"
+        ]
+      }
+    }
+  }
+}
