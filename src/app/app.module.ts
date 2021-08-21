@@ -12,9 +12,12 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 
 import { ComponentsModule } from './components/components.module';
+import { ModalHostDirective } from './pages/modal-info/modal-host.directive';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent, 
+    ModalHostDirective],
   entryComponents: [],
   imports: [
     BrowserModule,

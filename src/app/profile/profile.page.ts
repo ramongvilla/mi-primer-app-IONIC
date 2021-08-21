@@ -1,6 +1,6 @@
 import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
-
+          
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',

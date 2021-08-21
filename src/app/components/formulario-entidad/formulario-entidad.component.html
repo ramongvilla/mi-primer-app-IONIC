@@ -1,0 +1,62 @@
+<form [formGroup]="entidadForm" (ngSubmit)="guardarEntidad()">
+
+  <ion-item>
+    <ion-label position="floating">Nombre </ion-label>
+    <ion-input type="text" formControlName="nombre"></ion-input>
+  </ion-item>
+
+
+  <div *ngFor="let validation of mensajeError">
+    <ion-text color="danger" *ngIf="validation.campo === 'nombre'">
+      <small> {{ validation.mensaje }}</small>
+    </ion-text>
+  </div>
+
+  <div formArrayName="campos">
+    <div *ngFor = "let camposForms of campos.controls; let i = index"  [formGroup]="camposForms">
+      
+      <ion-item>
+        <ion-label position="floating">Nombre </ion-label>
+        <ion-input type="text" formControlName="nombre"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">valor </ion-label>
+        <ion-input type="text" formControlName="valor"></ion-input>
+      </ion-item>
+
+    </div>
+  </div>
+
+  <ion-item>
+    <ion-label class="error-message" position="floating">Picture </ion-label>
+    <ion-input type="text" formControlName="picture"></ion-input>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label position="floating">Estatus </ion-label>
+    <ion-input type="text" formControlName="estatus"></ion-input>
+  </ion-item>
+
+  <!--
+  <ion-text [ngClass]="{'text-success':campo ==='estatus'}">
+    <small>{{campo}}</small>
+  </ion-text>
+-->
+
+  <ion-item>
+    <ion-label position="floating">Owner </ion-label>
+    <ion-input type="text" formControlName="owner"></ion-input>
+  </ion-item>
+
+
+  <div>
+    <ion-button color="success" expand="block" type="submit">
+      <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+      Crear Entidad
+    </ion-button>
+  </div>
+
+</form>

@@ -1,0 +1,9 @@
+<app-header titulo="Pagin Principal"></app-header>
+
+
+<ion-content padding>
+
+    <ion-button expand="full" *ngFor="let tab of tabs; let pos = index;" (click)="changeTab(pos)">
+      {{tab.title}}
+    </ion-button>
+</ion-content>
